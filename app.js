@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-
+const setupContactRouter = require("./app/routes/contact.routes")
 
 const app =express();
 
@@ -15,5 +15,6 @@ app.get("/", (req, res) =>{
 
 });
 
+setupContactRouter(app);
 
 module.exports = app;
