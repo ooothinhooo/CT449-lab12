@@ -22,7 +22,7 @@ app.use((req, res,next) =>{
     next(new BadRequestError(404, "Resource not found"));
 });
 
-app.use((err, req, res, next) =>{
+app.use((error, req, res, next) =>{
     errorHandler.handleError(error, res);
 });
 
